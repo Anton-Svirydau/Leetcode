@@ -8,6 +8,7 @@ class Solution:
                     return [i, j]
 '''
 
+'''
 #2 Task 9 - Easy
 class Solution:
     def isPalindrome(self, x: int) -> bool:
@@ -16,7 +17,7 @@ class Solution:
             return True
         else:
             return False
-# Second 
+# Second variation
 class Solution:
     def isPalindrome(self, x: int) -> bool:
         if x < 0:
@@ -31,3 +32,33 @@ class Solution:
             return True
         else:
             return False
+'''
+
+#3 Task 13 - Easy
+def roman_to_int(roman):
+    
+    roman_numerals = {
+        'I': 1, 'V': 5, 'X': 10, 'L': 50,
+        'C': 100, 'D': 500, 'M': 1000
+    }
+    
+    total = 0
+    prev_value = 0
+    
+    
+    for char in reversed(roman):
+        current_value = roman_numerals[char]
+        if current_value < prev_value:
+            
+            total -= current_value
+        else:
+            
+            total += current_value
+        prev_value = current_value
+    
+    return total
+
+
+roman_number = "LVIII"  
+result = roman_to_int(roman_number)
+print(f"{roman_number} = {result}")
