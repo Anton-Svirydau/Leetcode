@@ -34,31 +34,41 @@ class Solution:
             return False
 '''
 
+'''
 #3 Task 13 - Easy
-def roman_to_int(roman):
-    
-    roman_numerals = {
-        'I': 1, 'V': 5, 'X': 10, 'L': 50,
-        'C': 100, 'D': 500, 'M': 1000
-    }
-    
-    total = 0
-    prev_value = 0
-    
-    
-    for char in reversed(roman):
-        current_value = roman_numerals[char]
-        if current_value < prev_value:
-            
-            total -= current_value
-        else:
-            
-            total += current_value
-        prev_value = current_value
-    
-    return total
+class Solution:
+    def romanToInt(self, s: str) -> int:
+        roman_numerals = {'I': 1, 'V': 5, 'X': 10, 'L': 50, 'C': 100, 'D': 500, 'M': 1000}
+        total = 0
+        prev_value = 0
+        for char in reversed(s):
+            current_value = roman_numerals[char]
+            if current_value < prev_value:
+                total -= current_value
+            else:
+                total += current_value
+            prev_value = current_value
+        return total
+'''
 
+s = input()
+output = ""
+current_pofl = 0
+max_rofl = 0
 
-roman_number = "LVIII"  
-result = roman_to_int(roman_number)
-print(f"{roman_number} = {result}")
+for i in range(len(s)):
+    if i == 0:
+        output += s[i]
+    elif s[i] in output:
+        if max_rofl < len(output):
+            max_rofl = len(output)
+        output = ""
+        output += s[i]
+    else:
+        output += s[i]
+
+if max_rofl < len(output):
+    max_rofl = len(output)
+
+print(output)
+print(max_rofl)
