@@ -51,9 +51,9 @@ class Solution:
         return total
 '''
 
+'''
 s = input()
 output = ""
-current_pofl = 0
 max_rofl = 0
 
 for i in range(len(s)):
@@ -72,3 +72,23 @@ if max_rofl < len(output):
 
 print(output)
 print(max_rofl)
+'''
+
+s = input()
+a = []
+output = ""
+max_cringe = 0
+
+for i in range(len(s)):
+    if i == 0:
+        output += s[i]
+    elif s[i] in output:
+        a.append(output)
+        output = ""
+        output += s[i]
+    else:
+        output += s[i]
+
+a.append(output)
+
+print(a)
