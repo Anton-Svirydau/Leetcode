@@ -74,12 +74,13 @@ print(output)
 print(max_rofl)
 '''
 
+'''
 s = input()
 a = []
 output = ""
 current_cringe = 0
 max_cringe = 0
-
+s = s[::-1]
 
 for i in range(len(s)):
     if i == 0:
@@ -101,3 +102,5 @@ for k in a:
         max_cringe = current_cringe
 
 print(max_cringe)
+'''
+
