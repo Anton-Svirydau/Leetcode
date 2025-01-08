@@ -77,7 +77,9 @@ print(max_rofl)
 s = input()
 a = []
 output = ""
+current_cringe = 0
 max_cringe = 0
+
 
 for i in range(len(s)):
     if i == 0:
@@ -92,3 +94,10 @@ for i in range(len(s)):
 a.append(output)
 
 print(a)
+
+for k in a:
+    current_cringe = len(k)
+    if max_cringe < current_cringe:
+        max_cringe = current_cringe
+
+print(max_cringe)
