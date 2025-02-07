@@ -3,9 +3,27 @@ import itertools
 
 
 some_list = [1,2,3,4,5]
+
+
 some_choice = random.choice(some_list)
 
 #print(some_choice)
+
+randrange_some = random.randrange(1, 5, 1)
+
+#print(randrange_some)
+
+randint_some = random.randint(1, 5)
+
+#print(randint_some)
+
+sample_some = random.sample(some_list, 3)
+
+#print(sample_some)
+
+uniform_some = random.uniform(1, 5)
+
+#print(uniform_some)
 
 
 accumulate_sum = list(itertools.accumulate(some_list))
