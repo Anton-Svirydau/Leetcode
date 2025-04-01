@@ -1,3 +1,23 @@
+from abc import ABC, abstractmethod
+
+class Animal(ABC):
+    @abstractmethod
+    def make_sound(self):
+        pass  
+
+class Dog(Animal):
+    def make_sound(self):
+        return "Woof!"
+
+class Cat(Animal):
+    def make_sound(self):
+        return "Meow!"
+
+dog = Dog()
+cat = Cat()
+print(dog.make_sound())  # Woof!
+print(cat.make_sound())  # Meow!
+
 '''
 class BankAccount:
     def __init__(self, balance):
@@ -36,6 +56,7 @@ car = Car("Toyota")
 print(car.drive())  # Toyota is driving fast
 '''
 
+'''
 class Bird:
     def make_sound(self):
         return "Chirp!"
@@ -51,5 +72,5 @@ bird = Bird()
 duck = Duck()
 print(animal_sound(bird))  # Chirp!
 print(animal_sound(duck))  # Quack!
-
+'''
 
