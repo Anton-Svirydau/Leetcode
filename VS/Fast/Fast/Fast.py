@@ -20,6 +20,7 @@ print(account.get_balance())  # 1000
 # print(account.__balance)  # Error: AttributeError
 '''
 
+'''
 class Vehicle:
     def __init__(self, brand):
         self.brand = brand
@@ -33,5 +34,22 @@ class Car(Vehicle):
 
 car = Car("Toyota")
 print(car.drive())  # Toyota is driving fast
+'''
+
+class Bird:
+    def make_sound(self):
+        return "Chirp!"
+
+class Duck(Bird):
+    def make_sound(self):
+        return "Quack!"
+
+def animal_sound(animal):
+    return animal.make_sound()  # Work with any object, that have make_sound()
+
+bird = Bird()
+duck = Duck()
+print(animal_sound(bird))  # Chirp!
+print(animal_sound(duck))  # Quack!
 
 
